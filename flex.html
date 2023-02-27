@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Flex</title>
+    <style>
+
+        *{
+            box-sizing: border-box;
+            margin: 0px;
+        }
+
+        #flex-1{
+            width: 80%;
+            background: rgb(228, 231, 221);
+            border: solid black 2px;
+            margin: 10px auto;
+            padding: 10px;
+            border-radius: 16px;
+            display: flex;
+            flex-flow: column nowrap;
+            min-width: 290px;
+        }
+
+        #flex-container-1{
+            background: rgb(245, 242, 242);
+            border-radius: 8px;
+            padding: 2px;
+            display: flex;
+            align-items: stretch;
+        }
+
+        .flex-box-1{
+            background:rgb(195, 197, 191);
+            border-radius: 4px;
+            margin: 2px;
+            padding: 2px;
+        }
+
+        .flex-box-1 > h3{
+            text-align: center;
+        }
+
+        .flex-box-1 > p{
+            text-align: justify;
+            background: rgb(235, 247, 211);
+            padding: 8px;
+            border-radius: 4px;
+        }
+
+        #flex-container-2{
+            display: flex;
+            background: white;
+            border-radius: 8px;
+            flex-direction: row;
+
+        }
+
+        #flex-container-2 > p{
+            color:rgb(29, 230, 39);
+            font-family:'Courier New', Courier, monospace;
+            margin: 4px;
+            background: rgb(8, 9, 73);
+            border-radius: 4px;
+            padding: 10px;
+            flex-basis: 10px;
+            flex-grow: 2;
+            text-align: center;
+            flex:1 0 80px;
+        }
+
+        @media only screen and (max-width: 600px){
+            #flex-container-1{
+                flex-flow: column nowrap;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<div id="flex-1">
+    <h2>This is flex number 1</h2>
+    <div id="flex-container-1">
+        <div class="flex-box-1">
+            <h3>Content 1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                 Quo explicabo sint repellat! Reprehenderit quibusdam quos
+                  tenetur inventore molestias, nulla veritatis.Lorem ipsum 
+                  dolor sit amet consectetur adipisicing elit.
+                  Quo explicabo sint repellat! Reprehenderit quibusdam quos
+                   tenetur inventore molestias, nulla veritatis.</p>
+        </div>
+        <div class="flex-box-1">
+            <h3>Content 2</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                 Quo explicabo sint repellat! Reprehenderit quibusdam quos
+                  tenetur inventore molestias, nulla veritatis.</p>
+        </div>
+        <div class="flex-box-1">
+            <h3>Content 3</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                 Quo explicabo sint repellat! Reprehenderit quibusdam quos
+                  tenetur inventore molestias, nulla veritatis.</p>
+        </div>
+    </div>
+</div>
+
+
+<div id="flex-1">
+    <h2>This is flex number 2</h2>
+    <div id="flex-container-2">
+        <p>Flex 1</p>
+        <p>Flex 2</p>
+        <p>Flex 3</p>
+    </div>
+</div>
+</body>
+</html>
