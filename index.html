@@ -10,9 +10,10 @@
         *{
             box-sizing: border-box;
             margin: 0px;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
         }
 
-        #flex-1{
+        .flex-body{
             width: calc(100% - 10px);
             background: rgb(228, 231, 221);
             margin: 10px auto;
@@ -20,7 +21,14 @@
             border-radius: 16px;
             display: flex;
             flex-flow: column nowrap;
-            min-width: 290px;
+            min-width: 385px;
+        }
+
+        #header-flex{
+            margin-top: 0;
+            border-radius: 0 0 16px 16px;
+            position: sticky;
+            top: 0px;
         }
 
         #flex-container-1{
@@ -79,6 +87,81 @@
             transition: flex-basis 0.5s ease;
         }
 
+        #flex-container-3{
+            display: flex;
+        }
+
+        #logo-search{
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+            height: 36px;
+            margin: 3px;
+        }
+
+        #logo{
+            height: 100%;
+            flex: 0 0 40px;
+            line-height: 32px;
+            background: lightblue;
+            text-align: center
+        }
+
+        #search{
+            display: flex;
+            height: 100%;
+            flex: 1 0 auto;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #content-search{
+            width: 80%;
+            display:flex;
+            height: 100%;
+        }
+
+        #content-search > input{
+            flex-grow: 1;
+            border-radius: 5px 0 0 5px;
+            border: solid rgb(8, 9, 73);
+            border-width: 2px 0 2px 2px;
+        }
+
+        #content-search > input{
+            outline: none;
+            font-size: 16px;
+            padding: 0 10px;
+        }
+
+        #content-search > button{
+            border-radius: 0 5px 5px 0;
+            box-shadow: none;
+            border: solid rgb(8, 9, 73) 2px;
+        }
+
+        #content-search > button:focus{
+            outline: none;
+        }
+
+        #navs{
+            display: flex;
+            align-items: center;
+            justify-content: right;
+            margin: 3px;
+        }
+
+        #navs > div{
+            width: 80px;
+            height: 100%;
+            border:solid rgb(8, 9, 73) 2px;
+            border-radius: 5px;
+            text-align: center;
+            margin: 0 3px;
+            line-height: 36px;
+
+        }
+
         @media only screen and (max-width: 962px){
             #flex-container-1{
                 flex-flow: column nowrap;
@@ -91,61 +174,90 @@
             #flex-container-2 > p{
                 flex-basis: 400px;
             }
+
+            #flex-container-3{
+                flex-direction: column;
+            }
+            
+
+            #navs > div{
+                flex: 1 1 auto;
+            }
         }
 
     </style>
 </head>
 <body>
-<div id="flex-1">
-    <h2>This is flex number 1</h2>
-    <div id="flex-container-1">
-        <div class="flex-box-1">
-            <h3>Content 1</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                 Quo explicabo sint repellat! Reprehenderit quibusdam quos
-                  tenetur inventore molestias, nulla veritatis.Lorem ipsum 
-                  dolor sit amet consectetur adipisicing elit.
-                  Quo explicabo sint repellat! Reprehenderit quibusdam quos
-                   tenetur inventore molestias, nulla veritatis Lorem ipsum
-                    dolor sit amet consectetur adipisicing elit. Sequi eaque
-                     culpa hic magnam provident, totam, earum nesciunt quisquam
-                      quaerat ullam asperiores fuga, voluptatibus repellat
-                       voluptatem in facere libero? Voluptate, dicta.</p>
-        </div>
-        <div class="flex-box-1">
-            <h3>Content 2</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quo explicabo sint repellat! Reprehenderit quibusdam quos
-                 tenetur inventore molestias, nulla veritatis.Lorem ipsum 
-                 dolor sit amet consectetur adipisicing elit.
-                 Quo explicabo sint repellat! Reprehenderit quibusdam quos
-                  tenetur inventore molestias, nulla veritatis Lorem ipsum
-                   dolor sit amet consectetur adipisicing elit. Sequi eaque
-                    culpa hic magnam provident, totam, earum nesciunt quisquam
-                     quaerat ullam asperiores fuga, voluptatibus repellat
-                      voluptatem in facere libero? Voluptate, dicta.</p>
-        </div>
-        <div class="flex-box-1">
-            <h3>Content 3</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                 Quo explicabo sint repellat! Reprehenderit quibusdam quos
-                  tenetur inventore molestias, nulla veritatis.
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Quo explicabo sint repellat! Reprehenderit quibusdam quos
-                   tenetur inventore molestias, nulla veritatis.Lorem ipsum 
-                   dolor sit amet consectetur adipisicing elit.
-                   Quo explicabo sint repellat! Reprehenderit quibusdam quos
-                    tenetur inventore molestias, nulla veritatis Lorem ipsum
-                     dolor sit amet consectetur adipisicing elit. Sequi eaque
-                      culpa hic magnam provident, totam, earum nesciunt quisquam
-                       quaerat ullam asperiores fuga, voluptatibus repellat
-                        voluptatem in facere libero? Voluptate, dicta.</p>
+    <div class="flex-body" id="header-flex">
+        <div id="flex-container-3">
+            <div id="logo-search">
+                <div id="logo">Logo</div>
+                <div id="search">
+                    <form action="#" id="content-search"  method="get">
+                        <input type="search" name="searcher" id="searcher" placeholder="Search ">
+                        <button type="submit" id="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <div id="navs">
+                <div id="nav-1">Nav 1</div>
+                <div id="nav-2">Nav 2</div>
+                <div id="nav-3">Nav 3</div>
+                <div id="nav-3">Nav 4</div>
+                <div id="nav-3">Nav 5</div>
+            </div>
         </div>
     </div>
-</div>
+    <div class="flex-body" >
+        <h2>This is flex number 1</h2>
+        <div id="flex-container-1">
+            <div class="flex-box-1">
+                <h3>Content 1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quo explicabo sint repellat! Reprehenderit quibusdam quos
+                    tenetur inventore molestias, nulla veritatis.Lorem ipsum 
+                    dolor sit amet consectetur adipisicing elit.
+                    Quo explicabo sint repellat! Reprehenderit quibusdam quos
+                    tenetur inventore molestias, nulla veritatis Lorem ipsum
+                        dolor sit amet consectetur adipisicing elit. Sequi eaque
+                        culpa hic magnam provident, totam, earum nesciunt quisquam
+                        quaerat ullam asperiores fuga, voluptatibus repellat
+                        voluptatem in facere libero? Voluptate, dicta.</p>
+            </div>
+            <div class="flex-box-1">
+                <h3>Content 2</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quo explicabo sint repellat! Reprehenderit quibusdam quos
+                    tenetur inventore molestias, nulla veritatis.Lorem ipsum 
+                    dolor sit amet consectetur adipisicing elit.
+                    Quo explicabo sint repellat! Reprehenderit quibusdam quos
+                    tenetur inventore molestias, nulla veritatis Lorem ipsum
+                    dolor sit amet consectetur adipisicing elit. Sequi eaque
+                        culpa hic magnam provident, totam, earum nesciunt quisquam
+                        quaerat ullam asperiores fuga, voluptatibus repellat
+                        voluptatem in facere libero? Voluptate, dicta.</p>
+            </div>
+            <div class="flex-box-1">
+                <h3>Content 3</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quo explicabo sint repellat! Reprehenderit quibusdam quos
+                    tenetur inventore molestias, nulla veritatis.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quo explicabo sint repellat! Reprehenderit quibusdam quos
+                    tenetur inventore molestias, nulla veritatis.Lorem ipsum 
+                    dolor sit amet consectetur adipisicing elit.
+                    Quo explicabo sint repellat! Reprehenderit quibusdam quos
+                        tenetur inventore molestias, nulla veritatis Lorem ipsum
+                        dolor sit amet consectetur adipisicing elit. Sequi eaque
+                        culpa hic magnam provident, totam, earum nesciunt quisquam
+                        quaerat ullam asperiores fuga, voluptatibus repellat
+                            voluptatem in facere libero? Voluptate, dicta.</p>
+            </div>
+        </div>
+    </div>
 
 
-<div id="flex-1">
+    <div class="flex-body">
     <h2>This is flex number 2</h2>
     <div id="ww">
         <div id="flex-container-2">
