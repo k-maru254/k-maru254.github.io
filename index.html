@@ -43,10 +43,16 @@
         }
 
         .flex-box-1 > p{
+            height: calc(100% - 22px);
             text-align: justify;
             background: rgb(235, 247, 211);
             padding: 8px;
             border-radius: 4px;
+        }
+
+        #ww{
+            display: flex;
+            justify-content: right;
         }
 
         #flex-container-2{
@@ -55,6 +61,8 @@
             border-radius: 8px;
             flex-direction: row;
             justify-content: right;
+            flex-basis: 257px;
+            transition: flex-basis 0.5s ease;
         }
 
         #flex-container-2 > p{
@@ -71,13 +79,17 @@
             transition: flex-basis 0.5s ease;
         }
 
-        @media only screen and (max-width: 600px){
+        @media only screen and (max-width: 962px){
             #flex-container-1{
                 flex-flow: column nowrap;
             }
 
+            #flex-container-2{
+                flex-basis: 100%;
+            }
+
             #flex-container-2 > p{
-                flex-basis: 180px;
+                flex-basis: 400px;
             }
         }
 
@@ -94,19 +106,40 @@
                   tenetur inventore molestias, nulla veritatis.Lorem ipsum 
                   dolor sit amet consectetur adipisicing elit.
                   Quo explicabo sint repellat! Reprehenderit quibusdam quos
-                   tenetur inventore molestias, nulla veritatis.</p>
+                   tenetur inventore molestias, nulla veritatis Lorem ipsum
+                    dolor sit amet consectetur adipisicing elit. Sequi eaque
+                     culpa hic magnam provident, totam, earum nesciunt quisquam
+                      quaerat ullam asperiores fuga, voluptatibus repellat
+                       voluptatem in facere libero? Voluptate, dicta.</p>
         </div>
         <div class="flex-box-1">
             <h3>Content 2</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quo explicabo sint repellat! Reprehenderit quibusdam quos
+                 tenetur inventore molestias, nulla veritatis.Lorem ipsum 
+                 dolor sit amet consectetur adipisicing elit.
                  Quo explicabo sint repellat! Reprehenderit quibusdam quos
-                  tenetur inventore molestias, nulla veritatis.</p>
+                  tenetur inventore molestias, nulla veritatis Lorem ipsum
+                   dolor sit amet consectetur adipisicing elit. Sequi eaque
+                    culpa hic magnam provident, totam, earum nesciunt quisquam
+                     quaerat ullam asperiores fuga, voluptatibus repellat
+                      voluptatem in facere libero? Voluptate, dicta.</p>
         </div>
         <div class="flex-box-1">
             <h3>Content 3</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                  Quo explicabo sint repellat! Reprehenderit quibusdam quos
-                  tenetur inventore molestias, nulla veritatis.</p>
+                  tenetur inventore molestias, nulla veritatis.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Quo explicabo sint repellat! Reprehenderit quibusdam quos
+                   tenetur inventore molestias, nulla veritatis.Lorem ipsum 
+                   dolor sit amet consectetur adipisicing elit.
+                   Quo explicabo sint repellat! Reprehenderit quibusdam quos
+                    tenetur inventore molestias, nulla veritatis Lorem ipsum
+                     dolor sit amet consectetur adipisicing elit. Sequi eaque
+                      culpa hic magnam provident, totam, earum nesciunt quisquam
+                       quaerat ullam asperiores fuga, voluptatibus repellat
+                        voluptatem in facere libero? Voluptate, dicta.</p>
         </div>
     </div>
 </div>
@@ -114,10 +147,12 @@
 
 <div id="flex-1">
     <h2>This is flex number 2</h2>
-    <div id="flex-container-2">
-        <p>Flex 1</p>
-        <p>Flex 2</p>
-        <p>Flex 3</p>
+    <div id="ww">
+        <div id="flex-container-2">
+            <p>Flex 1</p>
+            <p>Flex 2</p>
+            <p>Flex 3</p>
+        </div>
     </div>
 </div>
 </body>
