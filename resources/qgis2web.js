@@ -27,7 +27,7 @@ var map = new ol.Map({
     overlays: [overlayPopup],
     layers: layersList,
     view: new ol.View({
-        extent: [291745.233265, 9870752.709984, 296505.783851, 9873114.405505], maxZoom: 17, minZoom: 6, projection: new ol.proj.Projection({
+         maxZoom: 22, minZoom: 13, projection: new ol.proj.Projection({
             code: 'EPSG:32737',
             extent: [-20037508.342789, -20037508.342789, 20037508.342789, 20037508.342789],
             units: 'm'})
