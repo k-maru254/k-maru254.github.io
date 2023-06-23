@@ -1,5 +1,5 @@
 ol.proj.proj4.register(proj4);
-ol.proj.get("EPSG:32737").setExtent([291745.233265, 9870752.709984, 296505.783851, 9873114.405505]);
+ol.proj.get("EPSG:32737").setExtent([292592.807029, 9869737.382534, 296430.148845, 9872112.879848]);
 var wms_layers = [];
 
 
@@ -33,7 +33,7 @@ lyr_GoogleHybrid_0.setVisible(true);lyr_projected_boundary_37s_1.setVisible(true
 var layersList = [lyr_GoogleHybrid_0,lyr_projected_boundary_37s_1];
 lyr_projected_boundary_37s_1.set('fieldAliases', {'id': 'id', 'Boundary': 'Boundary', 'Rates': 'Rates', 'Proprietor': 'Proprietor', 'Balance': 'Balance', });
 lyr_projected_boundary_37s_1.set('fieldImages', {'id': 'TextEdit', 'Boundary': 'TextEdit', 'Rates': 'TextEdit', 'Proprietor': 'TextEdit', 'Balance': 'TextEdit', });
-lyr_projected_boundary_37s_1.set('fieldLabels', {'id': 'no label', 'Boundary': 'no label', 'Rates': 'inline label', 'Proprietor': 'header label', 'Balance': 'inline label', });
+lyr_projected_boundary_37s_1.set('fieldLabels', {'id': 'inline label', 'Boundary': 'no label', 'Rates': 'inline label', 'Proprietor': 'header label', 'Balance': 'inline label', });
 lyr_projected_boundary_37s_1.on('precompose', function(evt) {
     evt.context.globalCompositeOperation = 'normal';
 });
